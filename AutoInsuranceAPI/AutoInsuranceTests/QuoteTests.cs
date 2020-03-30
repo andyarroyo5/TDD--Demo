@@ -1,3 +1,5 @@
+using AutoInsuranceAPI.Controllers;
+using AutoInsuranceAPI.Model;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -19,16 +21,16 @@ namespace AutoInsuranceTests
         [Fact]
         public void GetTest_GetQuotes()
         {
-            //fill 
+            //arrange 
             var car = new Car {
                 Year=2016,
-                Model="Vento"
+                Model=CarModels.Vento
             };
 
-            var location = "CDMX";
+            var location = Location.CDMX;
             
             //act
-            var result = _quoteController.Get();
+            var result = _quoteController.Get(car, location);
 
             //assert
             var model = Assert.IsAssignableFrom<ActionResult<List<Quote>>(result);
