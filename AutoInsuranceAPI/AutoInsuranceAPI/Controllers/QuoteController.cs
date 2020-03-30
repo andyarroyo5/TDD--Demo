@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AutoInsuranceAPI.Controllers
 {
-    public class CarQuoteAPI
+    public class QuoteController
     {
     }
 }
