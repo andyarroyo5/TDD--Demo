@@ -15,9 +15,11 @@ namespace AutoInsuranceAPI.Controllers
         {
             _quotes = new List<Quote>
             {
-                new Quote{ PackageName=Package.Limited,ExpirationDate=DateTime.Now.AddDays(120) },
-                new Quote{ PackageName=Package.Extended,ExpirationDate=DateTime.Now.AddDays(50) },
-                new Quote{ PackageName=Package.Integral,ExpirationDate=DateTime.Now.AddDays(30) }
+                new Quote{ PackageName=Package.Limited,ExpirationDate=DateTime.Now.AddDays(30),Location=Location.CDMX, Car= new Car{ Model=CarModels.Vento,Year=2019 },Coverage=new Dictionary<string, double>{{ "Amparo Robo Total",300000 }, { "ACCIDENTES AUTOMOVILÍSTICOS AL CONDUCTO",100000.00 } } },
+                new Quote{ PackageName=Package.Limited,ExpirationDate=DateTime.Now.AddDays(80),Location=Location.CDMX, Car= new Car{ Model=CarModels.Tida,Year=2019 }, Coverage=new Dictionary<string, double>{{ "Amparo Robo Total",300000 }, { "ACCIDENTES AUTOMOVILÍSTICOS AL CONDUCTO",100000.00 } } },
+                new Quote{ PackageName=Package.Limited,ExpirationDate=DateTime.Now.AddDays(120),Location=Location.CDMX, Car= new Car{ Model=CarModels.Gol,Year=2019 }, Coverage=new Dictionary<string, double>{{ "Amparo Robo Total",300000 }, { "ACCIDENTES AUTOMOVILÍSTICOS AL CONDUCTO",100000.00 } } },
+                new Quote{ PackageName=Package.Extended,ExpirationDate=DateTime.Now.AddDays(30),Location=Location.CDMX, Car= new Car{ Model=CarModels.Vento,Year=2017 },Coverage=new Dictionary<string, double>{{ "Amparo Robo Total",300000 }, { "ACCIDENTES AUTOMOVILÍSTICOS AL CONDUCTO",100000.00 } } },
+                new Quote{ PackageName=Package.Integral,ExpirationDate=DateTime.Now.AddDays(80),Location=Location.CDMX, Car= new Car{ Model=CarModels.Tida,Year=2019 }, Coverage=new Dictionary<string, double>{{ "Amparo Robo Total",300000 }, { "ACCIDENTES AUTOMOVILÍSTICOS AL CONDUCTO",100000.00 } } },                
             };
         }
 

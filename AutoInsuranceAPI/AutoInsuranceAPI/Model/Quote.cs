@@ -7,6 +7,8 @@ namespace AutoInsuranceAPI.Model
 {
     public class Quote
     {        
+
+        public Car Car { get; set; }
         public Location Location { get; set; }
         public Dictionary<string, double> Coverage { get; set; }
         public double Price { get; set; }
