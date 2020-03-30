@@ -1,4 +1,5 @@
 ﻿using AutoInsuranceAPI.Model;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace AutoInsuranceAPI.Controllers
             };
         }
 
-        public object Get(Car car, Location location)
+        public ActionResult<List<Quote>> Get(Car car, Location location)
         {
             return null;
         }

@@ -1,5 +1,6 @@
 using AutoInsuranceAPI.Controllers;
 using AutoInsuranceAPI.Model;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace AutoInsuranceTests
             var result = _quoteController.Get(car, location);
 
             //assert
-            var model = Assert.IsAssignableFrom<ActionResult<List<Quote>>(result);
+            var model = Assert.IsAssignableFrom<ActionResult<List<Quote>>>(result);
             Assert.Equal(3, model.Value.Count);
         }
     }
